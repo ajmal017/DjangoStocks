@@ -1,0 +1,1 @@
+web: gunicorn DjangoStocks.wsgi --log-file -
