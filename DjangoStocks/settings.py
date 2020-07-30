@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'DjangoStocks.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dea6pou5sqkcnu',
+        'HOST': 'ec2-107-20-15-85.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'bsvhhwikzdmtzj',
+        'PASSWORD': '07681c07cc9a583d6203137ca3abbf6c0191b07f215eea1d8bd038d1d9f22879'
     }
 }
 
