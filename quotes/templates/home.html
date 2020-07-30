@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if ticker %}
+    <p>{{ ticker }}</p>
+{% endif %}
+{% if api %}
+    <h1 style="color: lightcyan">{{ api.companyName }}</h1>
+    <br/>
+    <br/>
+    {% if api == "ERROR..." %}
+        There was a problem with your ticker symbol
+    {% else %}
+        <h3 style="color: burlywood">Open: ${{ api.open }}</h3>
+        <h3 style="color: burlywood">Low: ${{ api.low }}</h3>
+        <h3 style="color: burlywood">High: ${{ api.high }}</h3>
+        <h3 style="color: burlywood">Close: ${{ api.close }}</h3>
+        <h3 style="color: burlywood">Previous Close: ${{ api.previousClose }}</h3>
+    {% endif %}
+{% endif %}
+
+</body>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>DELETE STOCK</title>
+</head>
+<body>
+<h1 class="ui-state-hover" style="color: burlywood; font-family: Georgia">Delete Stock</h1>
+<br/>
+<br/>
+
+{% if ticker %}
+
+    {% for item in ticker %}
+        <a href="{% url 'delete' item.id %}" class="btn btn-outline-light">Delete {{ item }}</a><br style="margin: auto"> <br/>
+    {% endfor %}
+{% else %}
+    You don't have any stocks to delete.
+{% endif %}
+</body>
+{% endblock %}
