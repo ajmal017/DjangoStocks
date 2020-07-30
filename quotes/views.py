@@ -28,7 +28,7 @@ def home(request):
         }
         return render(request, 'home.html', context)
     else:
-        return render(request, 'home.html', {'ticker': "Enter a Ticker Symbol"})
+        return render(request, 'home.html', {'ticker': ""})
 
 
 def about(request):

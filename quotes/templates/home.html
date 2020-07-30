@@ -5,9 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-{% if ticker %}
-    <p>{{ ticker }}</p>
-{% endif %}
+<h1 style="color: lightcyan; font-family: Georgia">Enter a Ticker If You Dare</h1>
+<br/>
+<br/>
+<form action="{% url 'home' %}" class="form-inline my-2 my-lg-0" method="POST">
+            {% csrf_token %}
+          <input class="form-control m-md-1" style="background-color: burlywood" type="search" placeholder="Ticker" aria-label="Search" name="ticker_symbol">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tendies</button>
+</form>
 {% if api %}
     <h1 style="color: lightcyan">{{ api.companyName }}</h1>
     <br/>
