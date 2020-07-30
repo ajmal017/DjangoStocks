@@ -77,7 +77,7 @@ def delete(request, stock_id):
     item = Stocks.objects.get(pk=stock_id)
     item.delete()
     messages.success(request, f"{item} Has Been Deleted")
-    return redirect(add_stock)
+    return redirect('delete_stock')
 
 
 def delete_stock(request):
