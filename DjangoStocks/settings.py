@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'quotes',
+    'register',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+LOGIN_REDIRECT_URL = '/add_stock.html'
+LOGOUT_REDIRECT_URL = '/'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+

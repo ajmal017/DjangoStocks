@@ -37,6 +37,7 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+# TODO: Add functionality for individual users to have unique watchlist
 def add_stock(request):
     import requests
     import json

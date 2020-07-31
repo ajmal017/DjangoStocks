@@ -51,9 +51,12 @@
                 </div><br/>
             {% endfor %}
         {% endif %}
-
+{#        {% if user.is_authenticated %}#}
         {% block content %}
         {% endblock %}
+{#        {% else %}#}
+{#            <p>Login<a href="/login">Here</a></p>#}
+{#    `   {% endif %}#}
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
